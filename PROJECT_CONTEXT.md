@@ -339,7 +339,7 @@ Stage 4: Exit Rules
 ---
 
 ## Research Roadmap
-
+```
 **Phase 1 — Factor research** - COMPLETE
 **Phase 1b — Universe quality filters** - COMPLETE
 **Phase 2 — SCRAPPED**
@@ -349,7 +349,7 @@ Stage 4: Exit Rules
 **Phase 6 — Options (ThetaData/ORATS/Massive) integration** WILL SKIP FOR NOW DUE TO COSTS
 **Phase 7 — Forward test**
 **Phase 8 — Paper trading (IBKR)**
-
+```
 ---
 
 ## Key Papers
