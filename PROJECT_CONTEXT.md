@@ -354,6 +354,7 @@ Stage 4: Exit Rules
 
 ## Key Papers
 
+```
 Phase 1: Jegadeesh & Titman (1993), Asness Moskowitz Pedersen (2013), Frazzini & Pedersen (2014)
 Phase 3: Black & Scholes (1973), Merton (1976), Hoeting et al (1999) BMA
 Phase 4: Daniel & Moskowitz (2016), Barroso & Santa-Clara (2015), Ledoit & Wolf (2004)
@@ -361,7 +362,7 @@ Phase 5: Merton (1976) jump diffusion
 Phase 6: Xing Zhang Zhao (2010), Cremers & Weinbaum (2010), Pan & Poteshman (2006)
 Phase 7: Harvey Liu Zhu (2016), McLean & Pontiff (2016), Lopez de Prado (2018)
 Books: Grinold & Kahn, Lopez de Prado
-
+```
 ---
 
 ## Conventions & Preferences
