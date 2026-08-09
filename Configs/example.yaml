@@ -1,0 +1,93 @@
+# run:
+#   name: FirstTest
+#   start: 2011-01-01
+#   end: 2025-01-01
+#   capital: 100000
+
+# universe:
+#   base: Russell3000
+#   # filters:
+#   #   low_vol:
+#   #     type: volatility
+#   #     window: 63
+#   #     op: "<="
+#   #     threshold: 0.25
+
+# factors:
+#   residual_residual_momentum_126_21:
+#     type: residual_momentum
+#     lookback: 126
+#     buffer: 21
+
+# signals:
+#   name: residual_momentum_top_ventile_fixed3
+#   normalize:
+#     transform: none
+#     method: zscore
+#   combine:
+#     method: none
+#   ranking:
+#     method: single
+#     source: residual_residual_momentum_126_21
+#     order: desc
+#   long:
+#     method: topN
+#     value: 20
+
+# strategy:
+#   formationFrequency: monthly
+#   timeBasis: calendar
+#   holdingPeriods: 6
+#   holdingUnit: months
+#   slippage:
+#     model: spread
+#     sizeBased: true
+#     defaultSpread: 0.001
+#   capitalAllocation:
+#     basis: nav
+#     method: equalSplit
+#     shortfallPolicy: investAvailable
+#   positionAllocation:
+#     method: equal
+run:
+  name: FirstTest
+  start: 2011-01-01
+  end: 2025-01-01
+  capital: 100000000
+universe:
+  base: Russell3000
+factors:
+  residual_momentum_126_21:
+    type: residual_momentum
+    lookback: 126
+    buffer: 21
+signals:
+  name: momentum_top30_test23
+  normalize:
+    transform: none
+    winsorize: [0.01, 0.99]
+    method: zscore
+  combine:
+    method: none
+  ranking:
+    method: single
+    source: residual_momentum_126_21
+    order: desc
+  long:
+    method: topPct
+    value: 100
+strategy:
+  formationFrequency: monthly
+  timeBasis: calendar
+  holdingPeriods: 6
+  holdingUnit: months
+  slippage:
+    model: spread
+    sizeBased: true
+    defaultSpread: 0.001
+  capitalAllocation:
+    basis: nav
+    method: equalSplit
+    shortfallPolicy: investAvailable
+  positionAllocation:
+    method: equal

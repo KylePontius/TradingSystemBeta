@@ -1,0 +1,46 @@
+run:
+  name: FirstTest
+  start: 2011-01-01
+  end: 2025-01-01
+  capital: 100000
+
+universe:
+  base: Russell3000
+
+factors:
+  volatility_126:
+    type: volatility
+    window: 126
+    direction: -1
+  value:
+    type: value
+
+signals:
+  name: vol126AndValue
+  normalize:
+    transform: none
+    method: zscore
+  combine:
+    method: equal
+  ranking:
+    method: multi
+    order: desc
+  long:
+    method: topN
+    value: 300
+
+strategy:
+  formationFrequency: monthly
+  timeBasis: calendar
+  holdingPeriods: 6
+  holdingUnit: months
+  slippage:
+    model: spread
+    sizeBased: true
+    defaultSpread: 0.001
+  capitalAllocation:
+    basis: nav
+    method: equalSplit
+    shortfallPolicy: investAvailable
+  positionAllocation:
+    method: equal
